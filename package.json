@@ -1,0 +1,35 @@
+{
+  "name": "vibecode-platform",
+  "version": "1.0.0",
+  "description": "A dynamic code generation platform with AI integration",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:frontend\" \"npm run dev:backend\"",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:backend": "cd backend && npm run dev",
+    "build": "cd frontend && npm run build",
+    "start": "cd backend && npm start",
+    "install:all": "npm install && cd frontend && npm install && cd ../backend && npm install",
+    "docker:build": "docker-compose build",
+    "docker:up": "docker-compose up",
+    "docker:down": "docker-compose down"
+  },
+  "keywords": [
+    "code-generation",
+    "ai",
+    "platform",
+    "development",
+    "typescript",
+    "react",
+    "node"
+  ],
+  "author": "mahavarvinayak",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  },
+  "workspaces": [
+    "frontend",
+    "backend"
+  ]
+}
